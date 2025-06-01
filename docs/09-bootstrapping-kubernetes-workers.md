@@ -14,7 +14,7 @@ for HOST in node-0 node-1; do
   sed "s|SUBNET|$SUBNET|g" \
     configs/10-bridge.conf > 10-bridge.conf
 
-  scp 10-bridge.conf kubelet-config.yaml \
+  scp 10-bridge.conf configs/kubelet-config.yaml \
   root@${HOST}:~/
 done
 ```
